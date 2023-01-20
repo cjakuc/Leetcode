@@ -27,7 +27,7 @@ def maximumSum(a, m):
         # iter 4 -> sum_so_far = (3 + 5) % 7 = 1 -> idx_to_subtract = 1 -> prefix_array = [1, 1, 3, 3, 6]
 
         sum_so_far = (sum_so_far + a[idx]) % m
-        # bisect(bisect_right) locates the insertion point in a for x that would maintain sort order (lest to greatest)
+        # bisect(bisect_right) locates the insertion point in a for x that would maintain sort order (least to greatest)
         # bisect runs in 0(log n) time
         idx_to_subtract = bisect(a=prefix_array, x=sum_so_far)
         if idx_to_subtract == idx:
